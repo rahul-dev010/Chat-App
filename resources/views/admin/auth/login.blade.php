@@ -82,9 +82,19 @@
                 type="submit" 
                 class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition duration-300"
             >
-                Sign In
+                Sign In (Admin)
             </button>
         </form>
+
+        {{-- Added User Login Button --}}
+        <div class="mt-6 border-t border-gray-200 pt-6 text-center">
+            <p class="text-sm text-gray-600 mb-3">Not an administrator?</p>
+            <a href="{{ route('login') }}" 
+               class="inline-block w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300"
+            >
+                <i class="fas fa-user mr-2"></i> Go to User Login
+            </a>
+        </div>
     </div>
 
     <script>

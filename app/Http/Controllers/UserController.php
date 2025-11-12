@@ -12,7 +12,6 @@ class UserController extends Controller
     {
         return view('auth.login');
     }
-
     public function login(Request $request)
     {
         $credentials = $request->validate([
@@ -23,21 +22,24 @@ class UserController extends Controller
         // Attempt to log the user in using the default 'web' guard
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             $request->session()->regenerate();
-
-            // Redirect to the intended destination or the group creation page
-            return redirect()->intended(route('user.groups.create'))->with('success', 'Login successful!');
+            return redirect()->intended(route('private.chat.users'))->with('success', 'Login successful!');
         }
-
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records.',
         ])->onlyInput('email');
     }
-    
+
+    /**
+     * Handle user logout request.
+     */
     public function logout(Request $request)
     {
+        // Use the default Auth facade for web guard logout
         Auth::logout();
+
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+
         return redirect('/')->with('success', 'You have been logged out.');
     }
 }

@@ -1,3 +1,5 @@
+@extends('groups.layout.main')
+@section('content')
 <div class="container">
     <h1>💬 Group Chat: {{ $group->name }}</h1>
     
@@ -120,3 +122,6 @@
         });
     });
 </script>
+
+
+@endsection

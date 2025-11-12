@@ -13,11 +13,8 @@
                 <div class="flex items-center space-x-4">
                     <h1 class="text-2xl font-bold text-gray-800">My Mitra </h1>
                     <nav class="hidden md:flex space-x-4">
-                        <a href="{{ route('admin.dashboard') }}" class="text-blue-600 hover:text-blue-800 font-medium">Dashboard</a>
-                        <a href="{{ route('admin.add.user')}}" class="text-gray-600 hover:text-gray-800 font-medium">Add User</a>
                         <a href="{{ route('admin.user.list')}}" class="text-gray-600 hover:text-gray-800 font-medium">User List</a>
-                        <a href="{{ route('admin.group.chat')}}" class="text-gray-600 hover:text-gray-800 font-medium">Messages</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-800 font-medium">Settings</a>
+                        <a href="{{ route('private.chat.users')}}" class="text-gray-600 hover:text-gray-800 font-medium">Chat</a>
                     </nav>
                 </div>
                 
