@@ -47,4 +47,16 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    public function groups()
+    {
+        return $this->belongsToMany(Group::class, 'group_members', 'user_id', 'group_id');
+    }
+    
+    /**
+     * The messages sent by the user.
+     */
+    public function messages()
+    {
+        return $this->hasMany(Message::class); // मान लीजिए GroupChat मॉडल का नाम Message है
+    }
 }
