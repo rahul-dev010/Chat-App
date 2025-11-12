@@ -17,5 +17,10 @@ Route::prefix('admin')->group(function () {
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
         Route::get('/chat' , [AdminDashboardController::class , 'groupChat'])->name('admin.group.chat');
 
+        // add new user and list --
+        Route::get('/add-user',[AdminDashboardController::class , 'addUser'])->name('admin.add.user');
+        Route::post('/add-user',[AdminDashboardController::class , 'addUserStore'])->name('admin.add.user.store');
+        Route::get('/user-list',[AdminDashboardController::class ,'usersList'] )->name('admin.user.list');
+
     });
 });
