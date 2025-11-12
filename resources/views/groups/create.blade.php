@@ -13,8 +13,7 @@
                 <option value="{{ $user->id }}">{{ $user->name }} ({{ $user->email }})</option>
             @endif
         @endforeach
-    </select>
-    
+    </select>    
     <button type="submit">Create Group</button>
 </form>
 
