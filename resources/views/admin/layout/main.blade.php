@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Chat App</title>
+    <title>Dashboard - mitra App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,10 +11,11 @@
         <header class="bg-white shadow-md">
             <div class="container mx-auto px-4 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-4">
-                    <h1 class="text-2xl font-bold text-gray-800">Chat App Admin</h1>
+                    <h1 class="text-2xl font-bold text-gray-800">My Mitra </h1>
                     <nav class="hidden md:flex space-x-4">
                         <a href="{{ route('admin.dashboard') }}" class="text-blue-600 hover:text-blue-800 font-medium">Dashboard</a>
-                        <a href="#" class="text-gray-600 hover:text-gray-800 font-medium">Users</a>
+                        <a href="{{ route('admin.add.user')}}" class="text-gray-600 hover:text-gray-800 font-medium">Add User</a>
+                        <a href="{{ route('admin.user.list')}}" class="text-gray-600 hover:text-gray-800 font-medium">User List</a>
                         <a href="{{ route('admin.group.chat')}}" class="text-gray-600 hover:text-gray-800 font-medium">Messages</a>
                         <a href="#" class="text-gray-600 hover:text-gray-800 font-medium">Settings</a>
                     </nav>
@@ -58,8 +59,11 @@
         </header>
 
     <main>
-        {{-- This is where child views insert their content --}}
+
+
         @yield('content')
+
+
     </main>
 
     <footer class="bg-white border-t border-gray-200 mt-auto">
