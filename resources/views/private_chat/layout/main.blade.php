@@ -5,11 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Mitro App</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        
+.chat-scroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.chat-scroll::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+.chat-scroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #4e45e2;
+}
+
+  @media (max-width: 768px) {
+    .mobile-chat-height {
+      max-height: calc(100vh - 323px);
+    }
+  }
+
+
+#message-container{
+    background-image: url({{ asset('/chatbg.png') }});
+    background-size: contain;
+}
+    </style>
 </head>
-<body>
-       <header class="bg-white border-b shadow-sm">
+<body class="overflow-y-hidden">
+    <header class="bg-white border-b shadow-sm">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
         <!-- Left: Logo + Navigation -->
         <div class="flex items-center space-x-6">
@@ -83,16 +117,12 @@
     </nav>
 </header>
 
-
-    <main>
-
-
+    <main style="height: calc(100vh - 160px);
+    overflow:hidden">
         @yield('content')
-
-
     </main>
 
-<footer class="bg-gradient-to-r from-blue-50 via-white to-indigo-50 border-t border-gray-200 mt-auto">
+    <footer class="bg-gradient-to-r from-blue-50 via-white to-indigo-50 border-t border-gray-200 mt-auto">
     <div class="container mx-auto px-6 py-5">
         <div class="flex flex-col md:flex-row justify-between items-center gap-6">
             
@@ -140,5 +170,6 @@
         });
     });
 </script>
+
 </body>
 </html>

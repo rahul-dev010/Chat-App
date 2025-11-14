@@ -1,3 +1,5 @@
+@extends('groups.layout.main')
+@section('content')
 <form method="POST" action="{{ route('user.groups.store') }}">
     @csrf
     
@@ -13,8 +15,7 @@
                 <option value="{{ $user->id }}">{{ $user->name }} ({{ $user->email }})</option>
             @endif
         @endforeach
-    </select>
-    
+    </select>    
     <button type="submit">Create Group</button>
 </form>
 
@@ -26,3 +27,6 @@
         <li><a href="{{ route('user.groups.chat', $group) }}">{{ $group->name }}</a></li>
     @endforeach
 </ul>
+
+
+@endsection

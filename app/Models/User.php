@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'role_id',
         'role',
+        'hashed_password',
         'password',
     ];
 
@@ -32,6 +33,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
+        'hashed_password',
         'remember_token',
     ];
 
@@ -44,7 +46,7 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'hashed_password' => 'hashed',
         ];
     }
     public function groups()
@@ -58,5 +60,9 @@ class User extends Authenticatable
     public function messages()
     {
         return $this->hasMany(Message::class); // मान लीजिए GroupChat मॉडल का नाम Message है
+    }
+    public function getAuthPassword()
+    {
+        return $this->hashed_password;
     }
 }

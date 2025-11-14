@@ -43,20 +43,20 @@
 
                 <!-- Password -->
                 <div class="mb-6 relative">
-    <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
-    <input type="password" name="password" id="password" required
-        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        placeholder="Enter password">
-    <!-- Show/Hide Button -->
-    <button type="button" id="togglePassword"
-        class="absolute right-3 top-9 text-gray-500 hover:text-gray-700 focus:outline-none">
-        Show
-    </button>
+                    <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
+                    <input type="password" name="password" id="password" required
+                        class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Enter password">
+                    <!-- Show/Hide Button -->
+                    <button type="button" id="togglePassword"
+                        class="absolute right-3 top-9 text-gray-500 hover:text-gray-700 focus:outline-none">
+                        Show
+                    </button>
 
-    @error('password')
-                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                @enderror
-</div>
+                    @error('password')
+                                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                                @enderror
+                </div>
 
                 <!-- Submit Button -->
                 <div class="text-center">
