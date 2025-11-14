@@ -30,6 +30,7 @@
                                     <th class="px-4 py-3 text-start">Name</th>
                                     <th class="px-4 py-3 text-start">Email</th>
                                     <th class="px-4 py-3 text-start rounded-e-lg">Password</th>
+                                    <th class="px-4 py-3 text-start rounded-e-lg">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -42,6 +43,8 @@
                                         <td class="px-4 py-3 text-gray-800 font-medium">{{ $user->name }}</td>
                                         <td class="px-4 py-3 text-gray-600">{{ $user->email }}</td>
                                         <td class="px-4 py-3 rounded-e-lg text-gray-500">{{ $user->password }}</td>
+
+                                        <td class="px-4 py-3 rounded-e-lg text-gray-500">f</td>
                                     </tr>
                                 @endforeach
                             </tbody>
