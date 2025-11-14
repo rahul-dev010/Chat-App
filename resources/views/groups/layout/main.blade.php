@@ -6,17 +6,25 @@
     <title>Dashboard - mitra App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 </head>
 
+=======
+</head>
+>>>>>>> ca62e9ae08edfb584d441a13f195026f21a2f1e7
 <body>
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-4">
+<<<<<<< HEAD
                 <img src="{{ asset('/logo.png') }}" alt="Logo" class="h-12 w-12">
 
 
+=======
+                <h1 class="text-2xl font-bold text-gray-800">My Mitra </h1>
+>>>>>>> ca62e9ae08edfb584d441a13f195026f21a2f1e7
                 <nav class="hidden md:flex space-x-4">
                     
                     
